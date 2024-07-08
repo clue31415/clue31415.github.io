@@ -32,7 +32,7 @@
                 document.querySelector('.chat-content').insertAdjacentHTML('beforeend',template)
         const senddata = document.querySelector('#input').value;
         console.log("check before sending",senddata);
-        fetch("http://localhost:8000/askgpt",{method: "POST", headers: { 'Content-Type': 'application/x-www-form-urlencoded', },body: JSON.stringify(senddata),})
+        fetch("https://clue31415.github.io/askgpt",{method: "POST", headers: { 'Content-Type': 'application/x-www-form-urlencoded', },body: JSON.stringify(senddata),})
       .then(res => res.text())
       .then(data => {
         console.log("checking",data);

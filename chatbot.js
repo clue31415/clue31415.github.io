@@ -8,7 +8,7 @@ const port=8000
 
 import cors from "cors";
 const corsOptions = {
-  origin: 'http://localhost:8000/askgpt'
+  origin: 'https://clue31415.github.io/askgpt'
 };
 app.use(cors(corsOptions));
 
@@ -39,6 +39,6 @@ app.post("/askgpt", (req, res) => {
   })
 });
 
-app.listen(port, () => {
+app.listen("https://clue31415.github.io", port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 });
