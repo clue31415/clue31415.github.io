@@ -8,7 +8,7 @@ const port=8000
 
 import cors from "cors";
 const corsOptions = {
-  origin: 'https://clue31415.github.io/askgpt'
+  origin: 'https://mchatbot-clue31415s-projects.vercel.app/askgpt'
 };
 app.use(cors(corsOptions));
 
@@ -39,6 +39,6 @@ app.post("/askgpt", (req, res) => {
   })
 });
 
-app.listen("https://clue31415.github.io", port, () => {
+app.listen("https://mchatbot-clue31415s-projects.vercel.app", port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 });
