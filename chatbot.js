@@ -4,11 +4,11 @@ const app = express()
 import bodyParser from 'body-parser';
 app.use(bodyParser.urlencoded({extended : false}));
 app.use(bodyParser.json())
-const port=8000
+const PORT=4000
 
 import cors from "cors";
 const corsOptions = {
-  origin: 'https://mchatbot-clue31415s-projects.vercel.app/askgpt'
+  origin: 'https://chatbotserver-clue31415s-projects.vercel.app/askgpt'
 };
 app.use(cors(corsOptions));
 
@@ -39,6 +39,6 @@ app.post("/askgpt", (req, res) => {
   })
 });
 
-app.listen("https://mchatbot-clue31415s-projects.vercel.app", port, () => {
+app.listen(PORT, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 });
