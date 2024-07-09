@@ -4,18 +4,18 @@ const app = express()
 import bodyParser from 'body-parser';
 app.use(bodyParser.urlencoded({extended : false}));
 app.use(bodyParser.json())
-const PORT=4000
+const PORT=3000
 
 import cors from "cors";
 const corsOptions = {
-  origin: 'https://chatbotserver-clue31415s-projects.vercel.app/askgpt'
+  origin: 'https://chatbotserver-clue31415s-projects.vercel.app/api/askgpt'
 };
 app.use(cors(corsOptions));
 
 //'sk-proj-x7k7MjSCYMCYFUR0rRdwT3BlbkFJQ7et5pUtVDkqZFOVr0jc'
 //process.env.OPENAI_API_KEY
 
-app.post("/askgpt", (req, res) => {
+app.post("/api/askgpt", (req, res) => {
   console.log("postupload");
   res.header("Access-Control-Allow-Origin", "*");
   const openai = new OpenAI({
