@@ -25,7 +25,6 @@
     <input class="chat-box" id="input">
     <button id="send">전송</button>
     <script type="module">
-        location.reload(true);
         document.querySelector('#send').addEventListener('click', function(){
             var template = `<div class="line"><span class="chat-box mine">${ document.querySelector('#input').value }</span></div>`
                 document.querySelector('.chat-content').insertAdjacentHTML('beforeend',template)
