@@ -19,8 +19,8 @@ app.post("/api/askgpt", (req, res) => {
   console.log("postupload");
   res.header("Access-Control-Allow-Origin", "*");
   const openai = new OpenAI({
-    //apiKey: 'sk-proj-S3GtzGWFDdLeH1JjgTezT3BlbkFJZ1SWUm3Asul24Gbby0Y7',
-    apiKey: 'sk-proj-x7k7MjSCYMCYFUR0rRdwT3BlbkFJQ7et5pUtVDkqZFOVr0jc',
+    apiKey: 'sk-proj-S3GtzGWFDdLeH1JjgTezT3BlbkFJZ1SWUm3Asul24Gbby0Y7',
+    //apiKey: 'sk-proj-x7k7MjSCYMCYFUR0rRdwT3BlbkFJQ7et5pUtVDkqZFOVr0jc',
   });
   //askinggpt="You are a helpful assistant."+req.body;
   console.log(Object.keys(req.body)[0]);
