@@ -24,7 +24,7 @@ app.post("/api/askgpt", (req, res) => {
   });
   //askinggpt="You are a helpful assistant."+req.body;
   console.log(Object.keys(req.body)[0]);
-  const chatbotrole = "너는 친절한 상담사야. 30글자 이내 답변으로 대화를 나눠, 상대 감정을 파악해서 기쁨이면, 기쁜 노래를 틀어드릴께요, 슬픔이면, 슬픈 노래를 틀어드릴께요. 라고 대답해"
+  const chatbotrole = "너는 친절한 상담사야. 공감을 하면서 대화를 하고, 상대 감정을 파악해서 기쁨이면, 기쁜 노래를 틀어드릴께요, 슬픔이면, 슬픈 노래를 틀어드릴께요. 라고 대답해"
   openai.chat.completions.create({
     model: "gpt-3.5-turbo",
     messages: [{"role": "system", "content": chatbotrole},{"role": "user", "content": Object.keys(req.body)[0]}],
